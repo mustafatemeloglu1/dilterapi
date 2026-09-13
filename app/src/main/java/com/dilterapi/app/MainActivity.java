@@ -4,7 +4,7 @@ public class MainActivity extends Activity{
  WebView w; TextToSpeech tts;
  @Override public void onCreate(Bundle b){super.onCreate(b);
   tts=new TextToSpeech(this,status->{ if(status==TextToSpeech.SUCCESS){tts.setLanguage(new Locale("tr","TR"));tts.setSpeechRate(.88f);} });
-  w=new WebView(this); w.setBackgroundColor(Color.WHITE); WebSettings s=w.getSettings(); s.setJavaScriptEnabled(true); s.setDomStorageEnabled(true); s.setAllowFileAccess(true); s.setAllowContentAccess(true); s.setLoadsImagesAutomatically(true);
+  w=new WebView(this); w.setBackgroundColor(Color.WHITE); WebSettings s=w.getSettings(); s.setJavaScriptEnabled(true); s.setDomStorageEnabled(true); s.setAllowFileAccess(true); s.setAllowContentAccess(true); s.setAllowFileAccessFromFileURLs(true); s.setAllowUniversalAccessFromFileURLs(true); s.setLoadsImagesAutomatically(true);
   w.addJavascriptInterface(new Object(){ @JavascriptInterface public void speak(String text){ if(tts!=null){tts.stop();tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,"dilterapi");}} },"AndroidTTS");
   w.setOverScrollMode(View.OVER_SCROLL_NEVER); w.loadUrl("file:///android_asset/index.html"); setContentView(w);
  }
