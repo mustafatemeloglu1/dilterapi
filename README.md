@@ -1,11 +1,19 @@
-# DilTerapi Android
+# DilTerapi v2
 
-Görsel dil ve konuşma terapisi uygulaması için Android prototipi.
+Android için görsel dil, konuşma ve pragmatik beceri çalışma uygulaması.
 
-## GitHub Actions
+## İçerik
+- 5N1K: Kim / Ne / Nerede / Ne Zaman / Nasıl / Neden, her biri 30 görsel kart
+- Evet / Hayır: 20 kart
+- Duygular: 16 görsel durum
+- Duygu Nedenleri: neden-sonuç görsel seçimleri
+- Empati: günlük sosyal durumlar ve uygun tepki seçimleri
+- Günlük Kurallar: ev, okul, sokak, market ve sosyal iletişim kuralları
+- Zıt Kavramlar
+- Olay Sıralama: kronolojik sıralama
+- Cümle Oluşturma: 1–5+ kelime seviyeleri
+- Eylem İsimlendirme: 75 tek tek görsel kart
+- Ekler: 20 ek / kullanım örneği
+- Kelime Kategorileri: kategori → tek tek görsel kelime kartları
 
-1. Bu klasörün tamamını GitHub repository'sinin köküne yükleyin.
-2. `.github/workflows/build-apk.yml` otomatik olarak çalışır.
-3. GitHub > Actions > **Build DilTerapi APK** > ilgili çalıştırma > **Artifacts** > `DilTerapi-APK`.
-
-Workflow JDK 17 ve Gradle 8.10.2 kullanır. `gradlew` scripti, GitHub runner üzerinde Gradle'ı gerektiğinde indirip çalıştırır.
+Görseller emoji yerine çocuk dostu, offline çalışabilen SVG illüstrasyonlar olarak gömülüdür.
